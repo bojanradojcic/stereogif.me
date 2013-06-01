@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  max-width: 1000px;
+  margin: auto;
+  background-color: #EEE;
+  font-family: "museo-sans";
+  font-size: 62.5%; }
+
+header {
+  background-image: url("img/back.png");
+  border: 10px solid #FFF;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px; 
+}
+
+h1 {
+  font-size: 7em;
+  text-align: center;
+  padding: .25em 0;
+  color: #FFF; }
+  @media screen and (max-width: 500px) {
+    h1 {
+      margin: 1em 0; } }
+
+#gallery {
+  overflow: auto;
+  margin: 400px auto; }
+
+img {
+  width: 23%;
+  margin: 1%;
+  border: 5px solid #FFFFFF;
+  float: left; }
+  @media screen and (max-width: 780px) {
+    img {
+      width: 46%;
+      margin: 2%; } }
+  @media screen and (max-width: 500px) {
+    img {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 4%; } }
+  img.animated {
+    display: none; }
+
+a:hover img.animated {
+  display: inline; }
+a:hover img.static {
+  display: none; }
+
+figure {
+  max-width: 500px;
+  margin: 0 auto 3em auto; }
+  figure img {
+    width: 100%;
+    margin: 0;
+    float: none; }
+  figure figcaption {
+    font-size: 2em;
+    margin-top: .75em;
+    color: #FFF; }
+    @media screen and (max-width: 320px) {
+      figure figcaption {
+        font-size: 1.75em; } }
+  figure a, figure a:visited {
+    display: inline-block;
+    color: lime;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    text-decoration: none; }

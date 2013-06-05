@@ -8,191 +8,90 @@ body {
   padding: 15px;
   background-color: #DDD;
   font-family: "museo-sans";
-  font-size: 62.5%; }
+  font-size: 62.5%; 
+}
+
+.home-page {
+  background-image: url("img/boothBW.png");
+  background-repeat: no-repeat;
+  background-size: 350px;
+  background-attachment: fixed;
+  background-position: bottom left;
+}
 
 a, a:visited {
   color: #000;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 700;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
-header, footer {
-  background-image: url("img/backthin.png");
-  border: 13px solid #FFF;
-  background-size: 100% 100%;
-  position: relative;
-  width: 100%;
-}
-
-header br {
-  display: none;
-}
-
-footer {
-  max-width: 500px;
-  margin: auto;
-}
-
-nav {
-  position: absolute;
-  right: 10px;
-  top: 10px;
+a:hover {
+  color: #b9589c;
 }
 
 h1 {
-  font-size: 4em;
-  padding: .25em .25em 2em .25em;
+  font-size: 3.5em;
+  padding: 15px;
+  margin: 0 0 30px -25px;
+  color: #6e5f7b; 
+  background-image: url("img/backthin.png");
+  background-size: 100% 100%;
+  border: solid 10px #FFF;
+}
+
+h2 {
+  color: #6e5f7b;
+}
+
+section.info {
+  padding: 0 15px 0 30%;
+  margin-top: 30px;
+}
+
+section.info p {
+  font-size: 16px;
   margin: 0;
-  color: #222; 
-}
+  padding: 0;
+  margin-bottom: 45px;
+}  
 
-footer h1 {
-  margin: 0;
-  padding: .25em;
-}
+section.info p:first-of-type {
+  font-size: 28px;
+  color: #333;
+}  
 
-footer a {
-  font-size: 1em;
-}
+@media screen and (max-width: 600px) {
 
-h1 span {
-  font-weight: 300;
-  display: block;
-}
-
-h1 p {
-  margin-top: 0em;
-  padding-left: 3px;
-  font-size: .5em;
-  line-height: 2em;
-  font-weight: 300;
-}
-
-
-  @media screen and (max-width: 680px) {
-    h1 {
-      margin: 1em 0;
-      font-size: 3.5em; 
-    } 
+  section.info {
+    padding: 0;
+    margin-top: 15px;
   }
-
-.twitter-share-button {
-  opacity: 0;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
-#twitter {
-  opacity: .75;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-image: url("img/twitter.png");
-  background-size: 50px;
-}
-
-#gallery {
-  overflow: auto;
-  margin: 20px auto; 
-}
-
-.thumbnail {
-  width: 23.5%;
-  margin-right: 2%;
-  margin-bottom: 2%;
-  border: 5px solid #FFFFFF;
-  float: left; 
-}
-
-.thumbnail:nth-of-type(4n+4) {
-  margin-right: 0;
-}
-
-img.animated {
-  display: none; 
-}
-a:hover img.animated {
-  display: block; 
-}
-a:hover img.static {
-  display: none; 
-}
-
-
-
-
-figure {
-  max-width: 500px;
-  margin: 0 auto 10px auto; 
-}
-
-figure img {
-  width: 100%;
-  margin: 0;
-  float: none; 
-}
-
-figure figcaption {
-  font-size: 1.75em;
-  margin-top: .75em;
-  color: #222; }
-    
-figure a, figure a:visited {
-  display: inline-block;
-  color: black;
-  border-bottom: 2px solid lime;
-  text-decoration: none;
-  margin-bottom: 1em;
+  section.info p:first-of-type {
+    font-size: 22px;
+    color: #333;
+  }
+  h1 {
+  font-size: 3em;
+  margin: 0 0 30px 0;
+  }
+  .home-page {
+    background-image: none;
+  }   
 }
 
 @media screen and (max-width: 320px) {
-  body {
-    padding: 10px;
-  }
 
-  header, footer {
-    border-width: 8px;
+  section.info {
+    padding: 0;
+    margin-top: 5px;
   }
-  
-  header br {
-    display: block;
+  section.info p:first-of-type {
+    font-size: 18px;
+    color: #333;
+    padding-left: 25px;
   }
-
   h1 {
-    font-size: 2.5em;
-    line-height: 1.1em;
-    padding: .35em .25em .75em .25em;
+  font-size: 2.5em;
+  margin: 0 0 30px 0;
   }
-
-  footer h1 {
-  padding: .25em;
-}
-
-  .thumbnail {
-    width: 32%;
-    margin-bottom: 2%;
-    border-width: 2px;  
-  }
-  .thumbnail:nth-of-type(4n+4) {
-    margin-right: 2%;
-  } 
-  .thumbnail:nth-of-type(3n+3) {
-    margin-right: 0;
-  }
-  figure figcaption {
-    font-size: 1.5em; 
-  } 
 }

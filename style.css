@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 body {
@@ -8,90 +8,202 @@ body {
   padding: 15px;
   background-color: #DDD;
   font-family: "museo-sans";
-  font-size: 62.5%; 
+  font-size: 62.5%;
 }
 
 .home-page {
-  background-image: url("img/boothBW.png");
-  background-repeat: no-repeat;
-  background-size: 350px;
-  background-attachment: fixed;
-  background-position: bottom left;
+    max-width: 768px;
 }
 
 a, a:visited {
-  color: #000;
-  font-size: 1em;
+  color: inherit;
+  font-size: 15px;
   font-weight: 700;
+  white-space: nowrap;
+}
+
+a.button {
+  display: inline-block;
+  padding: 5px;
+  border: solid 3px;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #b9589c;
+  color: magenta;
+}
+
+.info {
+  min-height: 600px;
+  margin: auto;
+  box-shadow: 0 0 5px #999;
+  border-radius: 3px;
+  background-image: url("img/boothBW.png");
+  background-repeat: no-repeat;
+  background-size: 350px;
+  background-position: bottom left;
+  background-color: #FFF;
+  padding: 40px 20px 20px 215px;
+}
+
+.info p:first-of-type {
+  font-size: 20px;
+  line-height: 25px;
+  margin-top: 25px;
+}
+
+.how-it-works {
+  color: #666;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.info img {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+header, footer {
+  background-image: url("img/backthin.png");
+  border: 10px solid #FFF;
+  background-size: 100% 100%;
+  position: relative;
+  width: 100%;
+  padding: 20px 10px;
+}
+
+nav {
+  position: absolute;
+  top: 20px;
+  right: 10px;
 }
 
 h1 {
-  font-size: 3.5em;
-  padding: 15px;
-  margin: 0 0 30px -25px;
-  color: #6e5f7b; 
-  background-image: url("img/backthin.png");
-  background-size: 100% 100%;
-  border: solid 10px #FFF;
-}
-
-h2 {
-  color: #6e5f7b;
-}
-
-section.info {
-  padding: 0 15px 0 30%;
-  margin-top: 30px;
-}
-
-section.info p {
-  font-size: 16px;
+  font-size: 30px;
+  line-height: 30px;
   margin: 0;
   padding: 0;
-  margin-bottom: 45px;
-}  
-
-section.info p:first-of-type {
-  font-size: 28px;
-  color: #333;
-}  
-
-@media screen and (max-width: 600px) {
-
-  section.info {
-    padding: 0;
-    margin-top: 15px;
-  }
-  section.info p:first-of-type {
-    font-size: 22px;
-    color: #333;
-  }
-  h1 {
-  font-size: 3em;
-  margin: 0 0 30px 0;
-  }
-  .home-page {
-    background-image: none;
-  }   
 }
 
-@media screen and (max-width: 320px) {
+h1 span {
+  font-weight: 300;
+  display: block;
+  font-size: 20px;
+}
 
-  section.info {
-    padding: 0;
-    margin-top: 5px;
+h1 br {
+  display: none;
+}
+
+p {
+  margin: 20px 0;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#gallery {
+  overflow: auto;
+  margin: 20px auto;
+}
+
+.thumbnail {
+  width: 23.5%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  border: 5px solid #FFFFFF;
+  display: block;
+  float: left;
+}
+
+.thumbnail:nth-of-type(4n+4) {
+  margin-right: 0;
+}
+
+iframe {
+  opacity: 0;
+  max-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#twitter {
+  opacity: .75;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-image: url("img/twitter.png");
+  background-size: 50px;
+}
+
+footer {
+  max-width: 500px;
+  margin: auto;
+  line-height: 20px;
+}
+
+figure {
+  max-width: 500px;
+  margin: 0 auto 20px auto;
+}
+
+figure img {
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  h1 br {
+    display: block;
   }
-  section.info p:first-of-type {
-    font-size: 18px;
-    color: #333;
-    padding-left: 25px;
+
+  body {
+    padding: 10px;
   }
-  h1 {
-  font-size: 2.5em;
-  margin: 0 0 30px 0;
+
+  header, footer {
+    border-width: 8px;
+  }
+
+  .info {
+    background-image: none;
+    padding: 40px 20px 20px 20px;
+  }
+
+  .info p br {
+    display: none;
+  }
+  
+  .info img {
+    display: block;
+  }
+
+  .thumbnail {
+    width: 32%;
+    margin-bottom: 2%;
+    border-width: 2px;
+  }
+  
+  .thumbnail:nth-of-type(4n+4) {
+    margin-right: 2%;
+  }
+  
+  .thumbnail:nth-of-type(3n+3) {
+    margin-right: 0;
+  }
+
+  footer h1 {
+  }
+
+  footer p {
   }
 }
